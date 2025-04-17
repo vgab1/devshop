@@ -1,54 +1,21 @@
-# React + TypeScript + Vite
+# DevShop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**DevShop** é uma loja virtual de demonstração, desenvolvida com **React**, **Vite**, **Tailwind CSS**, **Axios**, e **Context API**, simulando uma experiência de compra online com a adição de itens ao carrinho e visualização de produtos. Este projeto utiliza o **MockAPI** para simular uma API de produtos, permitindo testar a lógica de navegação, requisições e gerenciamento de estado de forma eficiente.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Visualização de Produtos**: Exibe uma lista de produtos com informações detalhadas (nome, descrição, preço, imagem).
+- **Carrinho de Compras**: Permite adicionar produtos ao carrinho, e o estado do carrinho é gerenciado globalmente através da **Context API**. Notificações de sucesso são exibidas com **React Hot Toast** quando um produto é adicionado.
+- **Navegação Responsiva**: Utiliza **React Router** para navegação entre as páginas de listagem e detalhamento de produtos.
+- **Design Responsivo**: Utiliza **Tailwind CSS** para garantir uma interface limpa e responsiva em diferentes tamanhos de tela.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **React**: Biblioteca JavaScript para criação de interfaces interativas.
+- **Vite**: Build tool de próxima geração que acelera o desenvolvimento com recarga instantânea e otimização de produção.
+- **Tailwind CSS**: Framework CSS utilitário para criação de layouts flexíveis e responsivos.
+- **Axios**: Cliente HTTP baseado em Promises para realizar requisições para a API.
+- **React Router DOM**: Gerenciamento de navegação e rotas no React.
+- **React Hot Toast**: Biblioteca de notificações para uma melhor experiência do usuário.
+- **MockAPI**: API mockada para simular o backend de produtos.
+- **Context API**: Usado para gerenciar o estado do carrinho de compras de maneira global, sem a necessidade de passar props entre componentes.
